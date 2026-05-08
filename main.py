@@ -52,8 +52,9 @@ creds = Credentials.from_service_account_info(
 
 gc = gspread.authorize(creds)
 
-sheet = gc.open("Telegram Recon").worksheet("raw")
-
+sheet = gc.open_by_key(
+    "1sP377OIK4AT_9BavW6RBoiOyzNme2heD__amSOaMamM"
+).worksheet("raw")
 # ====================================
 # MAIN FUNCTION
 # ====================================
